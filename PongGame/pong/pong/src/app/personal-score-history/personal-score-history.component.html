@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+
+<h2>
+  Here you have your personal score history to track your progress
+</h2>
+
+<div class="scoreDiv">
+    <h4>Your score history:</h4>
+    <table class="scoreTable">
+      <thead>
+        <tr>
+          <th scope="col">Score | </th>
+          <th scope="col">Comment: </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let score of personalScores">
+          <td>{{score.score}}</td>
+          <td>{{score.comment}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

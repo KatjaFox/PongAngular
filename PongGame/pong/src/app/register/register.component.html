@@ -1,0 +1,22 @@
+<h1>
+  Register
+</h1>
+
+
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+  <input type="text" formControlName="username" placeholder="Username">
+  <small [hidden]="registerForm.controls.username.valid || 
+  (registerForm.controls.username.pristine)">
+    Username has to be at least 6 characters long.
+  </small>
+  <br>
+  <input type="text" formControlName="password" placeholder="Password">
+  <small [hidden]="registerForm.controls.password.valid || 
+  (registerForm.controls.password.pristine)">
+    Password has to be at least 6 characters long.
+  </small>
+  <br>
+  <button id = "registerButton" [disabled] = "!registerForm.valid"
+  >Register</button>
+  <button routerLink="" id="loginButton" >Login</button>
+</form>

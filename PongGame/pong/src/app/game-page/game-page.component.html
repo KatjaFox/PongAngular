@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+<div>
+  <h1>Ufo-pong</h1>
+</div>
+<div id = "gameInfo">
+  <p>Points: {{points}}</p>
+  <p>Level: {{level}}</p>
+  <p>Rounds left: {{3 - roundsPlayed}}</p>
+</div>
+
+<div class="component">
+    <div class="row">
+      <div class="col-lg-1">
+        <div id = "tableDiv">
+
+        </div> 
+      </div>
+    </div>
+</div>
+<div id="restart button"> 
+  <br><br>
+  <button (click) = "restart()" class="restartBtn">Restart</button>
+</div>
+<router-outlet></router-outlet>
+

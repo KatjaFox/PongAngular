@@ -1,0 +1,22 @@
+<h1>
+  Login
+</h1>
+
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <input type="text" formControlName="username" placeholder="Username">
+  <small [hidden]="loginForm.controls.username.valid || 
+  (loginForm.controls.username.pristine)">
+    Username has to be at least 6 characters long.
+  </small>
+  <br>
+  <input type="text" formControlName="password" placeholder="Password">
+  <small [hidden]="loginForm.controls.password.valid || 
+  (loginForm.controls.password.pristine)">
+    Password has to be at least 6 characters long.
+  </small>
+  <br>
+  <button id = "loginButton" [disabled] = "!loginForm.valid"
+  >login</button>
+  <button routerLink="/register" id="registerButton" >Register</button>
+</form>

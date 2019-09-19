@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+
+<h2>
+  This is a leaderboard of registered users
+</h2>
+
+<div class="scoreDiv">
+    <h4>Leaderboard:</h4>
+    <table class="scoreTable">
+      <thead class="scoreHead">
+        <tr>
+          <th scope="col">User | </th>
+          <th scope="col">Score | </th>
+          <th scope="col">Comment </th>
+        </tr>
+      </thead>
+      <tbody class="scoreBody">
+        <tr *ngFor="let score of allScores">
+          <td>{{score.username}}</td>
+          <td>{{score.score}}</td>
+          <td>{{score.comment}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

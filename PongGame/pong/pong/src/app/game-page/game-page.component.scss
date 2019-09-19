@@ -1,0 +1,59 @@
+$tableWidth: 40vw;
+
+:host ::ng-deep #ballImg
+{
+    position: relative;
+    top: -150%; 
+    left: 0;
+     width: 15px;
+     height: 14px;
+    background-position-y: 0px
+}
+
+:host ::ng-deep .ball
+{
+    background-color: red;
+    background: url('../../assets/ufo_sprite.png') 0% 0;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute;
+}
+
+:host ::ng-deep .racket
+{
+    width: 12vw; // 12
+    height: 3vw; // 3
+    background-color: lightseagreen;
+    background: url('../../assets/spaceship.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+}
+
+:host ::ng-deep .obstacle
+{
+    width: 4vw;
+    height: 4vw; 
+    background-color: forestgreen;
+    background: url('../../assets/comet.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+}
+
+#tableDiv
+{
+    width: $tableWidth;
+    height: $tableWidth * 0.75;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border : 1px solid black;
+    border-bottom: 1px solid mediumaquamarine;
+    padding: 2vw;
+    position:relative;
+    background-color: rgb(24, 19, 94);
+}
+
